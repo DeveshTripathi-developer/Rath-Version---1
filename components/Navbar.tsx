@@ -53,23 +53,25 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
         className="w-full bg-[#FFFFFF] border-b border-[#CDAB7D]/30 transition-colors duration-200"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Official Brand Logo */}
+          {/* Official Brand Logo with subtle blend mode container and gentle drop-shadow */}
           <a
             href="#"
             className="flex items-center gap-3 group focus:outline-none py-1"
             id="nav-logo"
             aria-label="Anand Rathi Wealth UK Home"
           >
-            <div className="relative h-11 sm:h-12 w-48 sm:w-56 shrink-0">
-              <Image
-                src="https://www.anandrathiwealth.co.uk/New-UK-logo.png"
-                alt="Anand Rathi Wealth UK"
-                fill
-                priority
-                className="object-contain object-left"
-                sizes="(max-width: 640px) 192px, 224px"
-                referrerPolicy="no-referrer"
-              />
+            <div className="relative px-3.5 py-2 bg-[#0A1128] [background-blend-mode:multiply] rounded-xs border border-[#CDAB7D]/50 shadow-sm flex items-center shrink-0 group-hover:border-[#CDAB7D] transition-all">
+              <div className="relative h-8 sm:h-9 w-40 sm:w-48 shrink-0">
+                <Image
+                  src="https://www.anandrathiwealth.co.uk/New-UK-logo.png"
+                  alt="Anand Rathi Wealth UK"
+                  fill
+                  priority
+                  className="object-contain object-left filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+                  sizes="(max-width: 640px) 160px, 192px"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
             </div>
           </a>
 

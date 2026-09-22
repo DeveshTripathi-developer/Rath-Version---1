@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { ReadingProgressBar } from '@/components/ReadingProgressBar';
 import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/HeroSection';
 import { MetricsBand } from '@/components/MetricsBand';
@@ -21,6 +22,9 @@ export function HomePageClient() {
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] text-[#252525] flex flex-col selection:bg-[#F1E1A6] selection:text-[#252525]">
+      {/* Scroll-Linked Reading Progress Bar */}
+      <ReadingProgressBar />
+
       {/* 1. Top Sticky Notification Bar and Main Navigation */}
       <Navbar onOpenConsultation={() => setConsultationOpen(true)} />
 

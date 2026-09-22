@@ -17,15 +17,17 @@ export function Footer() {
           {/* Col 1: Brand & London Office (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="space-y-2">
-              <div className="relative h-12 w-52">
-                <Image
-                  src="https://www.anandrathiwealth.co.uk/New-UK-logo.png"
-                  alt="Anand Rathi Wealth UK"
-                  fill
-                  className="object-contain object-left"
-                  sizes="208px"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="inline-block p-3 bg-[#0A1128] rounded-xs border border-[#CDAB7D]/50 shadow-sm">
+                <div className="relative h-10 w-48">
+                  <Image
+                    src="https://www.anandrathiwealth.co.uk/New-UK-logo.png"
+                    alt="Anand Rathi Wealth UK"
+                    fill
+                    className="object-contain object-left drop-shadow-sm"
+                    sizes="192px"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
               </div>
               <span className="text-xs uppercase tracking-[0.2em] text-[#B3742D] font-semibold block">
                 Private Wealth Management • City of London

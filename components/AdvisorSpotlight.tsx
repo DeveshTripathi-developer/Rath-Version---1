@@ -53,23 +53,23 @@ export function AdvisorSpotlight() {
               <div
                 key={leader.id}
                 id={`leader-card-${leader.id}`}
-                className="bg-[#F8F5EF] border-2 border-[#CDAB7D]/60 rounded-sm p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:border-[#B3742D] transition-all"
+                className="group bg-[#F8F5EF] border-2 border-[#CDAB7D]/60 rounded-sm p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:border-[#B3742D] hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <div>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 border-b border-[#CDAB7D]/30 pb-5 mb-5">
-                    {/* Profile Image with Gold Frame */}
-                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-sm overflow-hidden border-2 border-[#CDAB7D] shrink-0 shadow-xs bg-[#FFFFFF]">
+                    {/* Profile Image with Gold Frame & Hover Zoom */}
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-sm overflow-hidden border-2 border-[#CDAB7D] shrink-0 shadow-xs bg-[#FFFFFF] group-hover:border-[#B3742D] transition-colors duration-300">
                       {leader.imageUrl ? (
                         <Image
                           src={leader.imageUrl}
                           alt={leader.name}
                           fill
-                          className="object-cover object-top"
+                          className="object-cover object-top group-hover:scale-108 transition-transform duration-500 ease-out"
                           sizes="(max-width: 640px) 80px, 96px"
                           referrerPolicy="no-referrer"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center font-serif font-bold text-lg text-[#B3742D] bg-[#F1E1A6]/30">
+                        <div className="w-full h-full flex items-center justify-center font-serif font-bold text-lg text-[#B3742D] bg-[#F1E1A6]/30 group-hover:scale-105 transition-transform duration-300">
                           {leader.initials}
                         </div>
                       )}
@@ -77,10 +77,10 @@ export function AdvisorSpotlight() {
 
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center justify-between gap-2">
-                        <h4 className="font-serif font-bold text-2xl text-[#252525]">
+                        <h4 className="font-serif font-bold text-2xl text-[#252525] group-hover:text-[#B3742D] transition-colors duration-200">
                           {leader.name}
                         </h4>
-                        <span className="px-2.5 py-0.5 bg-[#FFFFFF] text-[10px] font-mono font-medium text-[#252525] border border-[#CDAB7D]/40 rounded-sm">
+                        <span className="px-2.5 py-0.5 bg-[#FFFFFF] text-[10px] font-mono font-medium text-[#252525] border border-[#CDAB7D]/40 rounded-sm shadow-2xs">
                           {leader.experience}
                         </span>
                       </div>
@@ -106,7 +106,7 @@ export function AdvisorSpotlight() {
                       {leader.qualifications.map((q, idx) => (
                         <span
                           key={idx}
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#FFFFFF] border border-[#CDAB7D]/30 text-xs text-[#252525] rounded-xs font-medium"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#FFFFFF] border border-[#CDAB7D]/30 text-xs text-[#252525] rounded-xs font-medium group-hover:border-[#CDAB7D]/60 transition-colors duration-200"
                         >
                           <GraduationCap className="w-3.5 h-3.5 text-[#B3742D]" />
                           <span>{q}</span>
@@ -122,7 +122,7 @@ export function AdvisorSpotlight() {
                     className="inline-flex items-center gap-1 text-xs font-bold text-[#B3742D] hover:text-[#7C4C21] transition-colors cursor-pointer"
                   >
                     <span>Read Executive Profile</span>
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                   <span className="text-[11px] text-[#5F5F5F]">City of London</span>
                 </div>
@@ -148,22 +148,22 @@ export function AdvisorSpotlight() {
               <div
                 key={leader.id}
                 id={`group-leader-${leader.id}`}
-                className="bg-[#FFFFFF] border border-[#CDAB7D]/40 rounded-sm overflow-hidden flex flex-col justify-between shadow-2xs hover:border-[#B3742D] hover:shadow-md transition-all group"
+                className="bg-[#FFFFFF] border border-[#CDAB7D]/40 rounded-sm overflow-hidden flex flex-col justify-between shadow-2xs hover:border-[#B3742D] hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 group"
               >
                 <div>
-                  {/* Profile Image Section */}
+                  {/* Profile Image Section with subtle hover-zoom */}
                   <div className="relative w-full aspect-[4/3] bg-gradient-to-b from-[#FAF9F6] to-[#EFEAE1] overflow-hidden border-b border-[#CDAB7D]/30 flex items-center justify-center">
                     {leader.imageUrl ? (
                       <Image
                         src={leader.imageUrl}
                         alt={leader.name}
                         fill
-                        className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500"
+                        className="object-contain object-bottom group-hover:scale-108 transition-transform duration-500 ease-out"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         referrerPolicy="no-referrer"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center font-serif font-bold text-2xl text-[#B3742D] bg-[#F1E1A6]/20">
+                      <div className="w-full h-full flex items-center justify-center font-serif font-bold text-2xl text-[#B3742D] bg-[#F1E1A6]/20 group-hover:scale-105 transition-transform duration-300">
                         {leader.initials}
                       </div>
                     )}
@@ -175,7 +175,7 @@ export function AdvisorSpotlight() {
                   {/* Profile Details */}
                   <div className="p-5">
                     <div className="border-b border-[#CDAB7D]/20 pb-3 mb-3">
-                      <h4 className="font-serif font-bold text-lg text-[#252525] group-hover:text-[#B3742D] transition-colors">
+                      <h4 className="font-serif font-bold text-lg text-[#252525] group-hover:text-[#B3742D] transition-colors duration-200">
                         {leader.name}
                       </h4>
                       <p className="text-[11px] font-semibold text-[#B3742D] uppercase tracking-wider mt-0.5">
@@ -196,7 +196,7 @@ export function AdvisorSpotlight() {
                       className="w-full text-left inline-flex items-center justify-between text-xs font-bold text-[#B3742D] hover:text-[#7C4C21] transition-colors cursor-pointer"
                     >
                       <span>View Full Biography</span>
-                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
                     </button>
                   </div>
                 </div>
