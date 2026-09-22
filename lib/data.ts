@@ -6,6 +6,8 @@ export interface LeadershipMember {
   category: 'uk-onshore' | 'group-leadership';
   experience: string;
   bioSummary: string;
+  imageUrl?: string;
+  initials: string;
   qualifications: string[];
   fullBio: string[];
   focusAreas: string[];
@@ -38,6 +40,8 @@ export const LEADERSHIP: LeadershipMember[] = [
     title: 'Executive Director, Anand Rathi Wealth UK Limited',
     category: 'uk-onshore',
     experience: '10+ Years in Strategy Consulting & Private Wealth',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop',
+    initials: 'AG',
     bioSummary: 'Strategy consulting veteran with decade-long experience leading strategic advisory at EY-Parthenon, specializing in UK-India wealth corridors.',
     qualifications: [
       'CISI Level 4 Qualified',
@@ -65,6 +69,8 @@ export const LEADERSHIP: LeadershipMember[] = [
     title: 'Executive Director, Anand Rathi Wealth UK Limited',
     category: 'uk-onshore',
     experience: '25+ Years in UK Corporate Finance & Investment Banking',
+    imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop',
+    initials: 'PM',
     bioSummary: 'Distinguished corporate finance leader with over a quarter-century in London banking (ex-PwC, Vedanta Resources UK, co-founder of Jiva Capital Partners).',
     qualifications: [
       'Chartered Accountant (FCA/ACA)',
@@ -92,6 +98,8 @@ export const LEADERSHIP: LeadershipMember[] = [
     title: 'Founder & Chairman, Anand Rathi Group',
     category: 'group-leadership',
     experience: '40+ Years in Financial Leadership & Capital Markets',
+    imageUrl: 'https://www.anandrathiwealth.co.uk/anand-rathi1.jpg',
+    initials: 'AR',
     bioSummary: 'Former BSE President and Chartered Accountant Gold Medallist, leading the Anand Rathi Group across four decades of financial innovation.',
     qualifications: [
       'Chartered Accountant Gold Medallist',
@@ -118,6 +126,8 @@ export const LEADERSHIP: LeadershipMember[] = [
     title: 'Co-Founder & Vice Chairman, Anand Rathi Group',
     category: 'group-leadership',
     experience: '30+ Years in Capital Markets & Cross-Border Wealth',
+    imageUrl: 'https://www.anandrathiwealth.co.uk/pradeep-gupta.png',
+    initials: 'PG',
     bioSummary: 'Over three decades of capital markets leadership and Harvard Business School alumnus, instrumental in building transparent advisory architecture.',
     qualifications: [
       'Harvard Business School (Alumnus)',
@@ -143,6 +153,8 @@ export const LEADERSHIP: LeadershipMember[] = [
     title: 'Chief Executive Officer, Anand Rathi Wealth Limited',
     category: 'group-leadership',
     experience: '19+ Years Leading AR Wealth to $11.16B AUM',
+    imageUrl: 'https://www.anandrathiwealth.co.uk/rakesh-sir1.png',
+    initials: 'RR',
     bioSummary: 'Over 19 years steering Anand Rathi Wealth to $11.16B+ AUM, former Deutsche Bank Head of Private Wealth and Hindustan Unilever (HUL) executive.',
     qualifications: [
       'B.Tech Mechanical Engineering, IIT Kanpur',
@@ -169,6 +181,8 @@ export const LEADERSHIP: LeadershipMember[] = [
     title: 'Joint Chief Executive Officer, Anand Rathi Wealth Limited',
     category: 'group-leadership',
     experience: '20+ Years in Private Wealth & Quantitative Research',
+    imageUrl: 'https://www.anandrathiwealth.co.uk/feroze-sir1.png',
+    initials: 'FA',
     bioSummary: 'Pioneer in structured risk frameworks and quantitative portfolio models, featured speaker across 2,500+ investor education media programs.',
     qualifications: [
       'Pioneer in Mathematical Risk Mitigation',

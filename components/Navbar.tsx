@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ShieldCheck, Menu, X, ChevronRight } from 'lucide-react';
 
 interface NavbarProps {
@@ -52,18 +53,24 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
         className="w-full bg-[#FFFFFF] border-b border-[#CDAB7D]/30 transition-colors duration-200"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Logo */}
+          {/* Official Brand Logo */}
           <a
             href="#"
-            className="flex flex-col group focus:outline-none"
+            className="flex items-center gap-3 group focus:outline-none py-1"
             id="nav-logo"
+            aria-label="Anand Rathi Wealth UK Home"
           >
-            <span className="font-serif font-bold text-xl sm:text-2xl text-[#252525] tracking-tight group-hover:text-[#B3742D] transition-colors">
-              Anand Rathi Wealth UK
-            </span>
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#5F5F5F] font-medium">
-              Private Wealth Management • City of London
-            </span>
+            <div className="relative h-11 sm:h-12 w-48 sm:w-56 shrink-0">
+              <Image
+                src="https://www.anandrathiwealth.co.uk/New-UK-logo.png"
+                alt="Anand Rathi Wealth UK"
+                fill
+                priority
+                className="object-contain object-left"
+                sizes="(max-width: 640px) 192px, 224px"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </a>
 
           {/* Desktop Navigation Links */}

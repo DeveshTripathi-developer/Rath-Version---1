@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ShieldAlert, Landmark, Mail, ArrowUp } from 'lucide-react';
 
 export function Footer() {
@@ -15,11 +16,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           {/* Col 1: Brand & London Office (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div>
-              <span className="font-serif font-bold text-2xl text-[#252525] tracking-tight block">
-                Anand Rathi Wealth UK
-              </span>
-              <span className="text-xs uppercase tracking-[0.2em] text-[#B3742D] font-semibold">
+            <div className="space-y-2">
+              <div className="relative h-12 w-52">
+                <Image
+                  src="https://www.anandrathiwealth.co.uk/New-UK-logo.png"
+                  alt="Anand Rathi Wealth UK"
+                  fill
+                  className="object-contain object-left"
+                  sizes="208px"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <span className="text-xs uppercase tracking-[0.2em] text-[#B3742D] font-semibold block">
                 Private Wealth Management • City of London
               </span>
             </div>
