@@ -1,0 +1,6 @@
+{
+  "name": "Anand Rathi Wealth UK",
+  "description": "FCA-regulated wealth management for UK residents and the Indian diaspora, offering structured, UK-based access to India-focused investment opportunities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
